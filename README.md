@@ -29,6 +29,7 @@ Then add a reference to the `allow_file` file path in your vhost, in a location 
 ```nginx
 location / {
   include /etc/nginx/cloudflare_allow.conf;
+}
 ```
 ### Run the script
 Make sure everything works by running the script
