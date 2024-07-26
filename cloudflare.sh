@@ -20,12 +20,10 @@ for subnet in $ipv6_subnets; do
 done
 echo "}" >> "$geo_file"
 
-echo "# Cloudflare IPs Allow" > "$allow_file"
 echo "# Cloudflare IPs to restore from" > "$allow_file"
 for subnet in $ipv4_subnets; do
     echo "set_real_ip_from $subnet;" >> "$allow_file"
 done
-
 for subnet in $ipv6_subnets; do
     echo "set_real_ip_from $subnet;" >> "$allow_file"
 done
